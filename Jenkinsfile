@@ -16,5 +16,11 @@ node {
             sh 'echo "Ini adalah test"'
         }
     }
+    stage('Test Docker') {
+        steps {
+            sh 'docker version'
+            sh 'docker ps -a'
+    }
+}
 
 }
